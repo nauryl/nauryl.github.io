@@ -45,7 +45,7 @@ h1 {
   margin-right: 50px;
   padding-bottom: 0px;
   line-height: 68px;
-  color: #FF6060;
+  color: white /*#FF6060*/;
   animation: glow 1s ease-in-out infinite alternate;
 }
 h2 {
