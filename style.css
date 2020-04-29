@@ -46,7 +46,7 @@ h1 {
   padding-bottom: 0px;
   line-height: 68px;
   color: white /*#FF6060*/;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 h2 {
   font-family: 'Abril Fatface', cursive;
@@ -142,18 +142,11 @@ blockquote {
   background: #393939;
   margin-top: 50px;
 }
-/*@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #E60000, 0 0 40px #E60000, 0 0 50px #E60000, 0 0 60px #E60000, 0 0 70px #E60000;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px ##FFE1E1, 0 0 40px ##FFE1E1 0 0 50px ##FFE1E1, 0 0 60px ##FFE1E1, 0 0 70px ##FFE1E1, 0 0 80px ##FFE1E1;
-  } */
  @keyframes glow {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #E60000, 0 0 20px #E60000, 0 0 25px #E60000, 0 0 30px #E60000, 0 0 35px #E60000;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #E60000, 0 0 20px #E60000, 0 0 25px #E60000, 0 0 30px #E60000/*, 0 0 35px #E60000*/;
   }
   to {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFC3C3, 0 0 40px #FFC3C3, 0 0 50px #FFC3C3, 0 0 60px #FFC3C3, 0 0 70px #FFC3C3;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(250, 40, 40), 0 0 40px rgb(250, 40, 40), 0 0 50px rgb(250, 40, 40), 0 0 60px rgb(250, 40, 40)/*, 0 0 70px #FFC3C3*/;
   }
 }
