@@ -1,0 +1,159 @@
+main {
+  width: 800px;
+  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header {
+  background: #393939;
+  width: 800px;
+  margin:0 auto;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topmenu {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #EEEEEE;
+  font-size: 28px;
+  font-weight: 300;
+  margin: 15px;
+}
+.profile {
+  object-fit: cover;
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  z-index: -1;
+}
+.left {
+  width: 300px;
+}
+.right {
+  width: 500px;
+}
+.space {
+  height: 241px;
+}
+h1 {
+  font-family: 'Shadows Into Light', cursive;
+  margin-top: 0px;
+  font-size: 72px;
+  line-height: 60px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 0px;
+  line-height: 68px;
+  color: #FF6060;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+h2 {
+  font-family: 'Abril Fatface', cursive;
+  color: #EEEEEE;
+  margin: 0;
+  margin-left: 40px;
+  margin-right: 5px;
+  font-weight: 300;
+  font-size: 51px;
+  line-height: 1.5;
+}
+h3 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #DDDDDD;
+  margin-bottom: 0px;
+  font-size:36px;
+  font-weight: 500;
+  padding-bottom: 0;
+  margin-left: 50px;
+  margin-right: 0px;
+}
+h4 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 50px;
+  color: #393939;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+h5 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 3px;
+  margin-top: 60px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #393939;
+}
+h6 {
+  font-family: 'Merriweather', serif;;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #393939;
+}
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #393939;
+  margin-left: 50px;
+  margin-right: 0px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.bigger {
+  font-size: 20px;
+}
+ul {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #393939;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+blockquote::before {
+  content: '“';
+  color: #EEEEEE;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 300;
+  font-size: 140px;
+  position: absolute;
+  top: -38px;
+  left: 0px;
+}
+blockquote {
+  background: #900000;
+  vertical-align: center;
+  margin: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.line {
+  height: 5px;
+  width: 100%;
+  background: #393939;
+  margin-top: 50px;
+}
+/*@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #E60000, 0 0 40px #E60000, 0 0 50px #E60000, 0 0 60px #E60000, 0 0 70px #E60000;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px ##FFE1E1, 0 0 40px ##FFE1E1 0 0 50px ##FFE1E1, 0 0 60px ##FFE1E1, 0 0 70px ##FFE1E1, 0 0 80px ##FFE1E1;
+  } */
+ @keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #E60000, 0 0 20px #E60000, 0 0 25px #E60000, 0 0 30px #E60000, 0 0 35px #E60000;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFC3C3, 0 0 40px #FFC3C3, 0 0 50px #FFC3C3, 0 0 60px #FFC3C3, 0 0 70px #FFC3C3;
+  }
+}
