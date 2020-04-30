@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "nauryl.github.io",
+			"path": "."
+		},
+		{
+			"name": "images",
+			"path": "../../Coding-Greenfox-VS/01-week-codepens/anakin-cv-nauryl-2/images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nauryl.github.io"
+	}
+}
