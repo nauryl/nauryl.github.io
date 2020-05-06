@@ -55,6 +55,7 @@ let loadPhoto = (photoNumber) => {
     });
     $('#photo-title').text(imagesData[currentPhoto].title);
     $('#photo-description').text(imagesData[currentPhoto].description);
+
 };
 // original loadPhoto:
 // $('#photo').attr('src', imagesData[currentPhoto].photo);
@@ -78,4 +79,17 @@ $('#next').click(() => {
     loadPhoto(currentPhoto);
 });
 
-//loadPhoto(currentPhoto);
+imagesData.forEach((photo, index) => {
+    $('#thumbContainer').append(`<img class="thumb" data-index="${index}" src="${imagesData[index].photo}">`);
+
+});
+
+$('.thumb').click((event) => {
+    let thumbClicked = $(event.target).attr('data-index');
+    currentPhoto = parseInt(thumbClicked);
+    loadPhoto(currentPhoto);
+});
+
+
+
+loadPhoto(currentPhoto);
