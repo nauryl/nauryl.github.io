@@ -46,6 +46,7 @@ let imagesData = [{
         description: 'Techno party crowd at DFFRNTRoom Budapest. Photo: Illes Sandor'
     }
 ];
+//loadPhoto with fade in and out effect
 let loadPhoto = (photoNumber) => {
     $('#photo').fadeOut(300, function() {
         $('#photo').attr('src', imagesData[currentPhoto].photo).bind('onreadystatechange load', function() {
@@ -55,14 +56,14 @@ let loadPhoto = (photoNumber) => {
     $('#photo-title').text(imagesData[currentPhoto].title);
     $('#photo-description').text(imagesData[currentPhoto].description);
 };
-
-
+// original loadPhoto:
 // $('#photo').attr('src', imagesData[currentPhoto].photo);
 // $('#photo-title').text(imagesData[currentPhoto].title);
 // $('#photo-description').text(imagesData[currentPhoto].description);
 
 loadPhoto(currentPhoto);
 
+//added circularity to next-previous with else
 $('#previous').click(() => {
     if (currentPhoto > 0) {
         currentPhoto--;
@@ -77,4 +78,4 @@ $('#next').click(() => {
     loadPhoto(currentPhoto);
 });
 
-loadPhoto(currentPhoto);
+//loadPhoto(currentPhoto);
