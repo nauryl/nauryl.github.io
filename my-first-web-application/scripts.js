@@ -47,23 +47,33 @@ let imagesData = [{
     }
 ];
 let loadPhoto = (photoNumber) => {
-    $('#photo').attr('src', imagesData[currentPhoto].photo);
+    $('#photo').fadeOut(300, function() {
+        $('#photo').attr('src', imagesData[currentPhoto].photo).bind('onreadystatechange load', function() {
+            if (this.complete) $(this).fadeIn(300);
+        });
+    });
     $('#photo-title').text(imagesData[currentPhoto].title);
     $('#photo-description').text(imagesData[currentPhoto].description);
-}
+};
+
+
+// $('#photo').attr('src', imagesData[currentPhoto].photo);
+// $('#photo-title').text(imagesData[currentPhoto].title);
+// $('#photo-description').text(imagesData[currentPhoto].description);
+
 loadPhoto(currentPhoto);
 
 $('#previous').click(() => {
     if (currentPhoto > 0) {
         currentPhoto--;
-    }
+    } else { currentPhoto = 8 }
     loadPhoto(currentPhoto);
 });
 
 $('#next').click(() => {
     if (currentPhoto < 8) {
         currentPhoto++;
-    }
+    } else { currentPhoto = 0 }
     loadPhoto(currentPhoto);
 });
 
