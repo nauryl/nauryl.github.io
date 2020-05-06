@@ -55,7 +55,12 @@ let loadPhoto = (photoNumber) => {
     });
     $('#photo-title').text(imagesData[currentPhoto].title);
     $('#photo-description').text(imagesData[currentPhoto].description);
-
+    let photoData = currentPhoto.toString();
+    console.log(photoData);
+    $('div').removeClass('active');
+    $(`.thumb[data-index='${photoData}']`).addClass('active');
+    //$(".thumb").find(`[data-index='${photoData}']`).toggleclass('selected');
+    //$(`[data-index]=${actualPhoto}`).css('border', 'white')
 };
 // original loadPhoto:
 // $('#photo').attr('src', imagesData[currentPhoto].photo);
@@ -64,29 +69,32 @@ let loadPhoto = (photoNumber) => {
 
 loadPhoto(currentPhoto);
 
+imagesData.forEach((photo, index) => {
+    $('#thumbContainer').append(`<img class="thumb" data-index="${index}" src="${imagesData[index].photo}">`);
+
+});
+
 //added circularity to next-previous with else
 $('#previous').click(() => {
     if (currentPhoto > 0) {
         currentPhoto--;
-    } else { currentPhoto = 8 }
+    } else { currentPhoto = 8 };
+    //    $('div').removeClass('active');
     loadPhoto(currentPhoto);
 });
 
 $('#next').click(() => {
     if (currentPhoto < 8) {
         currentPhoto++;
-    } else { currentPhoto = 0 }
+    } else { currentPhoto = 0 };
+    //    $('div').removeClass('active');
     loadPhoto(currentPhoto);
-});
-
-imagesData.forEach((photo, index) => {
-    $('#thumbContainer').append(`<img class="thumb" data-index="${index}" src="${imagesData[index].photo}">`);
-
 });
 
 $('.thumb').click((event) => {
     let thumbClicked = $(event.target).attr('data-index');
     currentPhoto = parseInt(thumbClicked);
+    //    $('div').removeClass('active');
     loadPhoto(currentPhoto);
 });
 
